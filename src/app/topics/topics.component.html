@@ -1,0 +1,22 @@
+<div>
+    <h3>List of Topics</h3>
+</div>
+<div>
+    <table class="table table-striped">
+        <thead></thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>description</th>
+        </tr>
+
+        <tbody>
+            <tr *ngFor="let topic of topics">
+                <td><a routerLink="/" class="nav-link" (click)="getCourses(topic.id)">{{topic.id}}</a></td>
+                <td>{{topic.name}}</td>
+                <td>{{topic.description}}</td>
+                <td><button class="btn btn-danger" (click)="deleteTopic(topic)">Delete Topic</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
